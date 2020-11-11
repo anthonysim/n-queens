@@ -131,21 +131,41 @@
     // test if a specific major diagonal on this board contains a conflict
     hasMajorDiagonalConflictAt: function(colIndex) {
       let rows = this.rows();
-
+      debugger;
+      let count = 0;
       for (var i = 0; i < rows.length; i++) {
-        if ( this.hasColConflictAt(colIndex + i) ) {
-          return true;
+        let num = rows[i][colIndex + i];
+        debugger;
+        if (num === undefined) {
+          continue;
+        } else {
+          count += num;
         }
       }
-      return false;
       // in the case something is undefined;
+      return count > 1;
     },
 
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
-      return false; // fixme
+      let rows = this.rows();
+      debugger;
+      // for (var i = 0; i < rows.length; i++) {
+      //   for (var j = 0; j < rows.length; j++) {
+      //     console.log('rows[i][j]: ' + rows[i][j]);
+      //     debugger;
+      //     if ( this.hasMajorDiagonalConflictAt(rows[i][j]) ) {
+      //       return true;
+      //     }
+      //   }
+      // }
+      // return false;
     },
 
+// 0: [ 1, 0, 0, 0 ] ,
+// 1: [ 0, 0, 0, 0 ] ,
+// 2: [ 0, 0, 0, 0 ] ,
+// 3: [ 0, 0, 0, 0 ]
 
     // Minor Diagonals - go from top-right to bottom-left
     // --------------------------------------------------------------
