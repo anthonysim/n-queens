@@ -150,22 +150,19 @@
     hasAnyMajorDiagonalConflicts: function() {
       let rows = this.rows();
       debugger;
-      // for (var i = 0; i < rows.length; i++) {
-      //   for (var j = 0; j < rows.length; j++) {
-      //     console.log('rows[i][j]: ' + rows[i][j]);
-      //     debugger;
-      //     if ( this.hasMajorDiagonalConflictAt(rows[i][j]) ) {
-      //       return true;
-      //     }
-      //   }
-      // }
-      // return false;
+      for (var i = 0; i < rows.length; i++) {
+        for (var j = 0; j < rows.length; j++) {
+          console.log('rows[i][j]: ' + rows[i][j]);
+          debugger;
+          if ( this.hasMajorDiagonalConflictAt(rows[i][j]) ) {
+            return true;
+          }
+        }
+      }
+      return false;
     },
 
-// 0: [ 1, 0, 0, 0 ] ,
-// 1: [ 0, 0, 0, 0 ] ,
-// 2: [ 0, 0, 0, 0 ] ,
-// 3: [ 0, 0, 0, 0 ]
+
 
     // Minor Diagonals - go from top-right to bottom-left
     // --------------------------------------------------------------
