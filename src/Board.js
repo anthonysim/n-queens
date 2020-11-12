@@ -84,6 +84,8 @@
       return count > 1;
     },
 
+    // O(n)
+
     // test if any rows on this board contain conflicts
     hasAnyRowConflicts: function() {
       let n = this.get('n');
@@ -96,7 +98,7 @@
       return false;
     },
 
-
+    // O(n)
 
     // COLUMNS - run from top to bottom
     // --------------------------------------------------------------
@@ -112,6 +114,8 @@
       return count > 1;
     },
 
+    // O(n)
+
     // test if any columns on this board contain conflicts
     hasAnyColConflicts: function() {
       let n = this.get('n');
@@ -124,6 +128,7 @@
       return false;
     },
 
+    // O(n)
 
     // Major Diagonals - go from top-left to bottom-right
     // --------------------------------------------------------------
@@ -146,6 +151,8 @@
       return count > 1;
     },
 
+    // O(n)
+
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
       let n = this.get('n');
@@ -160,7 +167,7 @@
       return false;
     },
 
-
+    // O(n^2)
 
 
     // Minor Diagonals - go from top-right to bottom-left
@@ -184,6 +191,8 @@
       return count > 1;
     },
 
+    // O(n)
+
     // test if any minor diagonals on this board contain conflicts
     hasAnyMinorDiagonalConflicts: function() {
       let n = this.get('n');
@@ -198,11 +207,8 @@
       return false;
     }
 
+    // O(n^2)
 
-      // [ 0, 0, 0, 0 ] ,
-      // [ 1, 0, 0, 0 ] ,
-      // [ 0, 0, 0, 0 ] ,
-      // [ 0, 0, 1, 1 ]
 
     /*--------------------  End of Helper Functions  ---------------------*/
 
